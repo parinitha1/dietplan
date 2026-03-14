@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #fffaf0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #77dd77;
+            font-size: 24px;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: #77dd77;
+            color: white;
+        }
+
+        td {
+            background-color: #dcefdc;
+        }
+
+        .highlight {
+            background-color: #b3e6b3;
+        }
+
+        .header {
+            background-color: #77dd77;
+            color: white;
+        }
+
+        .first-column {
+            background-color: #77dd77;
+            color: white;
+        }
+
+        .crossed-out {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+
+        .alt-row {
+            background-color: #e6f7e6;
+        }
+
+        .reset-button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #77dd77;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cells = document.querySelectorAll("td");
+            cells.forEach(cell => {
+                cell.addEventListener("click", function () {
+                    cell.classList.toggle("crossed-out");
+                });
+            });
+
+            document.getElementById("resetButton").addEventListener("click", function () {
+                cells.forEach(cell => {
+                    cell.classList.remove("crossed-out");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Weekly Meal Plan</h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="header"> </th>
+                <th class="header">Monday</th>
+                <th class="header">Tuesday</th>
+                <th class="header">Wednesday</th>
+                <th class="header">Thursday</th>
+                <th class="header">Friday</th>
+                <th class="header">Saturday</th>
+                <th class="header">Sunday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first-column">Breakfast</td>
+                <td>FAST DAY<br>Water<br>Tea/Coffee</td>
+                <td>Western Omelette<br>Green apple</td>
+                <td>FAST DAY<br>Water<br>Tea/Coffee</td>
+                <td>All-Bran Buds with milk<br>Mixed berries</td>
+                <td>FAST DAY<br>Water<br>Tea/Coffee</td>
+                <td>Two eggs<br>Breakfast sausage/bacon<br>Strawberries</td>
+                <td>FAST DAY<br>Water<br>Tea/Coffee</td>
+            </tr>
+            <tr class="alt-row">
+                <td class="first-column">Lunch</td>
+                <td>FAST DAY<br>Water<br>Tea<br>1 cup of vegetable broth</td>
+                <td>Arugula salad with walnuts, slices of pear, goat cheese</td>
+                <td>FAST DAY<br>Water<br>Tea<br>1 cup of vegetable broth</td>
+                <td>Ginger chicken lettuce cups<br>Stir-fried vegetables</td>
+                <td>FAST DAY<br>Water<br>Tea<br>1 cup of vegetable broth</td>
+                <td>Baby spinach and lentil salad</td>
+                <td>FAST DAY<br>Water<br>Tea<br>1 cup of vegetable broth</td>
+            </tr>
+            <tr>
+                <td class="first-column">Dinner</td>
+                <td>Herbed chicken<br>Green beans<br>Mixed berries for dessert</td>
+                <td>Asian grilled pork belly<br>Baby bok choy stir-fry<br>No dessert</td>
+                <td>Halibut pan-fried in butter and coconut oil<br>No dessert</td>
+                <td>Indian chicken curry<br>Cauliflower<br>Green salad<br>No dessert</td>
+                <td>Baked catfish<br>Sautéed broccoli with garlic and olive oil<br>Seasonal fruits for dessert</td>
+                <td>Peppered steak<br>Asparagus</td>
+                <td>Grilled chicken salad<br>Dark chocolate for dessert</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="resetButton" class="reset-button">Reset</button>
+</body>
+</html>

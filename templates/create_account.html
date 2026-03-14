@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create Account</title>
+    <style>
+      body {
+        text-align: center;
+        margin: 0;
+        height: 100vh;
+        width: 200vh;
+        display: flex;
+        justify-content: space-between; /* Adjusts the spacing between items */
+        align-items: center;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0; /* Light pastel green background */
+      }
+
+      .create-account-container {
+        flex: 1;
+        max-width: 60%;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-left: 50px;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="date"],
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #71d071;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #77dd77;
+      }
+      .image-container {
+        flex: 1;
+        max-width: 50%; /* Adjust the width as needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .login-link {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      .login-link a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+      .login-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="create-account-container">
+      <h2>Create Account</h2>
+      <form action="/register" method="POST">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob_mother" name="dob_mother" required /><br />
+
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required
+        /><br />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+        /><br />
+
+        <label for="full_mother">Full Name:</label>
+        <input
+          type="text"
+          id="name_mother"
+          name="name_mother"
+          placeholder="Enter your Full Name"
+          required
+        /><br />
+
+        <button type="submit">Create Account</button>
+      </form>
+      <p class="login-link">
+        Already have an account? <a href="/login">Login here</a>
+      </p>
+    </div>
+    <div class="image-container">
+      <img src="static/images/createAcc.png" alt="create acc Image" />
+    </div>
+  </body>
+</html>

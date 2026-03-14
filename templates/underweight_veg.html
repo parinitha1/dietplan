@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Diet Plan</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #77dd77;
+        font-size: 24px;
+      }
+
+      table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      th {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      td {
+        background-color: #dcefdc;
+      }
+
+      .header {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .first-column {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .crossed-out {
+        text-decoration: line-through;
+        color: #aaa;
+      }
+
+      .reset-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #77dd77;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .reset-button:hover {
+        background-color: #5cb85c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weekly Diet Plan</h1>
+    <table>
+      <tr class="header">
+        <th>Day</th>
+        <th>Break Fast</th>
+        <th>Lunch</th>
+        <th>Tea Time</th>
+        <th>Dinner</th>
+      </tr>
+      <tr>
+        <td class="first-column">Sun</td>
+        <td onclick="toggleCrossOut(this)">1 glass milk & Bananas</td>
+        <td onclick="toggleCrossOut(this)">4 Roti, Rice, Dal, Paneer</td>
+        <td onclick="toggleCrossOut(this)">Tomato Soup and Veg Sandwich</td>
+        <td onclick="toggleCrossOut(this)">4 Roti, Rice, Dal, Rajma</td>
+      </tr>
+      <tr>
+        <td class="first-column">Mon</td>
+        <td onclick="toggleCrossOut(this)">1 glass milk & 2 boil Eggs</td>
+        <td onclick="toggleCrossOut(this)">
+          4 Roti, Rice, Dal, Soya and Salad
+        </td>
+        <td onclick="toggleCrossOut(this)">Burger and Lassi</td>
+        <td onclick="toggleCrossOut(this)">4 Roti, Rice, Dal, Soya bin</td>
+      </tr>
+      <tr>
+        <td class="first-column">Tue</td>
+        <td onclick="toggleCrossOut(this)">1 glass milk & Corn Flak</td>
+        <td onclick="toggleCrossOut(this)">
+          4 Roti, Rice, Dal, Green Peas Salad
+        </td>
+        <td onclick="toggleCrossOut(this)">Idli Chutney</td>
+        <td onclick="toggleCrossOut(this)">
+          4 Roti, Rice, Dal, Paneer and Salad
+        </td>
+      </tr>
+      <tr>
+        <td class="first-column">Wed</td>
+        <td onclick="toggleCrossOut(this)">1 glass milk & 4 Bananas</td>
+        <td onclick="toggleCrossOut(this)">4 Roti, Rice, Dal, Curd, Chicken</td>
+        <td onclick="toggleCrossOut(this)">Bread Butter and Omelet</td>
+        <td onclick="toggleCrossOut(this)">4 Roti, Rice, Dal, Chicken Curry</td>
+      </tr>
+      <tr>
+        <td class="first-column">Thu</td>
+        <td onclick="toggleCrossOut(this)">1 glass milk & Cheese S/W</td>
+        <td onclick="toggleCrossOut(this)">4 Roti, Rice, Dal, Mushroom</td>
+        <td onclick="toggleCrossOut(this)">Cheese Pizza and Orange Juice</td>
+        <td onclick="toggleCrossOut(this)">Veg Fried Rice and Clear Soup</td>
+      </tr>
+      <tr>
+        <td class="first-column">Fri</td>
+        <td onclick="toggleCrossOut(this)">1 glass milk & Omelet Bread</td>
+        <td onclick="toggleCrossOut(this)">4 Roti, Rice, Dal, Egg Curry</td>
+        <td onclick="toggleCrossOut(this)">Chicken Roll</td>
+        <td onclick="toggleCrossOut(this)">4 Roti, Rice, Dal, Fish Curry</td>
+      </tr>
+      <tr>
+        <td class="first-column">Sat</td>
+        <td onclick="toggleCrossOut(this)">1 glass milk & Bread Butter Jam</td>
+        <td onclick="toggleCrossOut(this)">
+          4 Roti, Rice, Dal, Leafy Veg, Curd
+        </td>
+        <td onclick="toggleCrossOut(this)">Potato Paratha</td>
+        <td onclick="toggleCrossOut(this)">
+          4 Roti, Rice, Dal, Mushroom, Salad
+        </td>
+      </tr>
+    </table>
+
+    <button class="reset-button" onclick="resetCrossOuts()">
+      Reset All Cross Outs
+    </button>
+
+    <script>
+      function toggleCrossOut(element) {
+        element.classList.toggle("crossed-out");
+      }
+
+      function resetCrossOuts() {
+        const crossedOutElements = document.querySelectorAll(".crossed-out");
+        crossedOutElements.forEach((element) => {
+          element.classList.remove("crossed-out");
+        });
+      }
+    </script>
+  </body>
+</html>

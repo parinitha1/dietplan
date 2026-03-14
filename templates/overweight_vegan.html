@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diet Plan Table</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #77dd77;
+        font-size: 24px;
+      }
+
+      table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      th {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      td {
+        background-color: #dcefdc;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #c9e9c9;
+      }
+
+      .highlight {
+        background-color: #b3e6b3;
+      }
+
+      .header {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .first-column {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .crossed-out {
+        text-decoration: line-through;
+        color: #aaa;
+      }
+
+      .reset-button {
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: #77dd77;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Vegan Diet Plan</h1>
+    <button class="reset-button" onclick="resetTable()">Reset</button>
+    <table id="dietTable">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Breakfast</th>
+          <th>Lunch</th>
+          <th>Dinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="first-column">Sunday</td>
+          <td>Banana Walnut Bread (make the day before)</td>
+          <td>Heart Healthy Quinoa Salad (make the same day)</td>
+          <td>Vegan Garlic "Chicken"</td>
+        </tr>
+        <tr>
+          <td class="first-column">Monday</td>
+          <td>Banana Walnut Bread</td>
+          <td>Vegan Garlic "Chicken" (leftovers)</td>
+          <td>Pumpkin Sage Pasta</td>
+        </tr>
+        <tr>
+          <td class="first-column">Tuesday</td>
+          <td>Banana Walnut Bread</td>
+          <td>Green Goddess Bowl (make for 3 days)</td>
+          <td>Pumpkin Sage Pasta</td>
+        </tr>
+        <tr>
+          <td class="first-column">Wednesday</td>
+          <td>Healthy Oatmeal Cookie (make the day before)</td>
+          <td>Green Goddess Bowl</td>
+          <td>Plant-based Shoyu Chick'n</td>
+        </tr>
+        <tr>
+          <td class="first-column">Thursday</td>
+          <td>Healthy Oatmeal Cookie</td>
+          <td>Green Goddess Bowl</td>
+          <td>Vegan Street Tacos</td>
+        </tr>
+        <tr>
+          <td class="first-column">Friday</td>
+          <td>Banana Date Rolls</td>
+          <td>Vegan Street Tacos (leftovers from Thu)</td>
+          <td>Plant-based Shoyu Chick'n</td>
+        </tr>
+        <tr>
+          <td class="first-column">Saturday</td>
+          <td>Banana Date Rolls</td>
+          <td>Plant-based Protein Power Bowl</td>
+          <td>Broccoli & Kale Salad with Creamy Garlic Dressing</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      const table = document.getElementById("dietTable");
+
+      table.addEventListener("click", function (e) {
+        const target = e.target;
+        if (target.tagName === "TD") {
+          target.classList.toggle("crossed-out");
+        }
+      });
+
+      function resetTable() {
+        const cells = table.getElementsByTagName("td");
+        for (let cell of cells) {
+          cell.classList.remove("crossed-out");
+        }
+      }
+    </script>
+  </body>
+</html>

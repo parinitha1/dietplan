@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Meal Plan</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #77dd77;
+        font-size: 24px;
+      }
+
+      table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      th {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      td {
+        background-color: #dcefdc;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #c7e8c7;
+      }
+
+      .highlight {
+        background-color: #b3e6b3;
+      }
+
+      .header {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .first-column {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .first-column td {
+        background-color: #2d6a4f;
+        color: white;
+      }
+
+      .crossed-out {
+        text-decoration: line-through;
+        color: #aaa;
+      }
+
+      .reset-button {
+        background-color: #77dd77;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 20px auto;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Interactive Meal Plan</h1>
+    <table id="mealPlan">
+      <tr class="header">
+        <th>Days</th>
+        <th>Breakfast</th>
+        <th>Morning Snack</th>
+        <th>Lunch</th>
+        <th>Evening Snack</th>
+        <th>Dinner</th>
+      </tr>
+      <tr>
+        <td class="first-column">Monday</td>
+        <td>Spinach Smoothie2</td>
+        <td>1 fruit of your choice</td>
+        <td>
+          1 cup rice/brown rice, 1 cup chicken curry, boiled spinach, fresh
+          salad
+        </td>
+        <td>
+          Tea and whole wheat crackers or 2 biscuits that are low on sugar
+        </td>
+        <td>
+          2 rotis or 1 cup of cooked millet, 1 cup dal or egg curry, 1 cup raw
+          salad
+        </td>
+      </tr>
+      <tr>
+        <td class="first-column">Tuesday</td>
+        <td>Idli or Vegetable Upma</td>
+        <td>1 fruit and a handful of nuts like almonds, walnuts, cashews</td>
+        <td>
+          2 rotis, 1 cup vegetable subzi of your choice, fresh salad, 1 cup dal
+          or 1 piece grilled chicken breast
+        </td>
+        <td>
+          1 Whole wheat bread toast with peanut butter. Sprinkle chia seeds on
+          top.
+        </td>
+        <td>
+          2 wheat rotis or jowar rotis, 1 cup subzi of your choice, 1 boiled
+          egg, 1 cup chickpea salad
+        </td>
+      </tr>
+      <tr>
+        <td class="first-column">Wednesday</td>
+        <td>Poha with 1 cup curd</td>
+        <td>1 fruit of your choice</td>
+        <td>
+          2 rotis, 1 piece pan seared chicken thigh, 1 cup subzi of your choice,
+          fresh salad
+        </td>
+        <td>Tea and a handful of roasted makhana or fox nuts</td>
+        <td>1 cup broccoli soup with 1 whole bread toast</td>
+      </tr>
+      <tr>
+        <td class="first-column">Thursday</td>
+        <td>
+          2 whole wheat bread toasted, 2 eggs for scrambled eggs or a mushroom
+          stuffed omelette
+        </td>
+        <td>1 fruit of your choice with a handful of nuts</td>
+        <td>
+          1 cup rice/brown rice, 1 cup egg or chicken curry or dal, fresh salad
+        </td>
+        <td>Tea and a handful of nuts and seeds</td>
+        <td>
+          1 cup of cooked millets or brown rice, 1 cup dal, 1 cup raw salad
+        </td>
+      </tr>
+      <tr>
+        <td class="first-column">Friday</td>
+        <td>Oats and apple pancakes</td>
+        <td>1 fruit of your choice</td>
+        <td>
+          1 cup rice with 1 cup steamed spinach, 1 cup chicken curry and 1 cup
+          of fresh salad
+        </td>
+        <td>Tea/coffee and a handful of roasted makhana or fox nuts</td>
+        <td>
+          1 cup chickpea salad. Or 1 grilled fish or chicken with grilled
+          vegetables like broccoli and carrots on the side.
+        </td>
+      </tr>
+      <tr>
+        <td class="first-column">Saturday</td>
+        <td>Masala Oats with a fried egg on top</td>
+        <td>A handful of nuts and seeds. Or 1 fruit of your choice</td>
+        <td>
+          2 rotis, 1 piece grilled fish or chicken, 1 cup subzi of your choice,
+          1 cup raw salad
+        </td>
+        <td>
+          Tea/Coffee with whole wheat crackers. Or 1 fruit of your choice. Or 1
+          whole wheat toast with peanut butter and sliced bananas on top.
+        </td>
+        <td>
+          1 cup Masala Macaroni with 1 cup raw salad on the side. Or 1 cup Dal
+          Khichdi.
+        </td>
+      </tr>
+      <tr>
+        <td class="first-column">Sunday</td>
+        <td>2 Dosas with peanut chutney and 1 cup vegetable sambar</td>
+        <td>A handful of nuts and seeds. Or 1 fruit of your choice.</td>
+        <td>
+          1 cup brown rice chicken biryani with cucumber raita and 1 cup of
+          fresh salad.
+        </td>
+        <td>
+          Tea/Coffee with whole wheat crackers. Or 1 fruit of your choice. Or 1
+          Whole wheat bread toast with peanut butter. Sprinkle chia seeds on
+          top.
+        </td>
+        <td>
+          2 rotis. 1 cup dal or egg curry. 1 cup subzi of your choice. 1 cup of
+          raw salad.
+        </td>
+      </tr>
+    </table>
+    <button class="reset-button" onclick="resetCrossedOut()">Reset</button>
+
+    <script>
+      document.querySelectorAll("td").forEach((cell) => {
+        cell.addEventListener("click", () => {
+          cell.classList.toggle("crossed-out");
+        });
+      });
+
+      function resetCrossedOut() {
+        document.querySelectorAll(".crossed-out").forEach((cell) => {
+          cell.classList.remove("crossed-out");
+        });
+      }
+    </script>
+  </body>
+</html>

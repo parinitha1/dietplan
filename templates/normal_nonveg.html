@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diet Plan Table</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #77dd77;
+        font-size: 24px;
+      }
+
+      table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      th {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #f2f2f2;
+      }
+
+      tr:nth-child(odd) td {
+        background-color: #dcefdc;
+      }
+
+      .crossed-out {
+        text-decoration: line-through;
+        color: #aaa;
+      }
+
+      .header {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .first-column {
+        background-color: #77dd77;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weekly Diet Plan</h1>
+    <table>
+      <thead>
+        <tr class="header">
+          <th>Time of Day</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="first-column" onclick="toggleCrossOut(this)">
+            Early Morning
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 TBSP Flaxseeds (Coarsely ground) + 1/4 TSP Cinnamon Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 TBSP Flaxseeds (Coarsely ground) + 1/4 TSP Cinnamon Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 TBSP Flaxseeds (Coarsely ground) + 1/4 TSP Cinnamon Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 TBSP Flaxseeds (Coarsely ground) + 1/4 TSP Cinnamon Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 TBSP Flaxseeds (Coarsely ground) + 1/4 TSP Cinnamon Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 TBSP Flaxseeds (Coarsely ground) + 1/4 TSP Cinnamon Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 TBSP Flaxseeds (Coarsely ground) + 1/4 TSP Cinnamon Powder
+          </td>
+        </tr>
+        <tr class="highlight">
+          <td class="first-column" onclick="toggleCrossOut(this)">Breakfast</td>
+          <td onclick="toggleCrossOut(this)">
+            2 Egg Whites Vegetables Omelette + 1 DRY Roti
+          </td>
+          <td onclick="toggleCrossOut(this)">Tri-colour Fish Mini Sandwich</td>
+          <td onclick="toggleCrossOut(this)">
+            50g Low Fat Paneer + 1 Cup Muesli (PLAIN)
+          </td>
+          <td onclick="toggleCrossOut(this)">Vermicelli Vegetable Egg Dish</td>
+          <td onclick="toggleCrossOut(this)">
+            1 Cup Milk (No Sugar) (Double Skimmed Cow’s Milk) + 1 Cup Rolled
+            Oats
+          </td>
+          <td onclick="toggleCrossOut(this)">Vegetable Fishy Bites</td>
+          <td onclick="toggleCrossOut(this)">1 Chicken Minty Katti Roll</td>
+        </tr>
+        <tr>
+          <td class="first-column" onclick="toggleCrossOut(this)">
+            Mid Morning
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green Tea 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Fruit + 6 to 8
+            PineNuts + 4 to 5 Pistachios (Unsalted)
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green Tea 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Fruit + 6 to 8
+            PineNuts + 4 to 5 Pistachios (Unsalted)
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green Tea 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Fruit + 6
+            Almonds + 2 Walnuts
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green Tea 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Fruit + 6 to 8
+            PineNuts + 4 to 5 Pistachios (Unsalted)
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green Tea 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Fruit + 6
+            Almonds + 2 Walnuts
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green Tea 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Fruit + 6
+            Almonds + 2 Walnuts
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green Tea 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Fruit + 6 to 8
+            PineNuts + 4 to 5 Pistachios (Unsalted)
+          </td>
+        </tr>
+        <tr class="highlight">
+          <td class="first-column" onclick="toggleCrossOut(this)">
+            To Be Taken Before Lunch
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column" onclick="toggleCrossOut(this)">Lunch</td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad (Lemon Pepper dressing) + 2 DRY Whole Wheat Phulka + 2
+            Pcs Chicken / Fish (Less Gravy)
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad (Thick curd dressing) + Vegetable red rice with
+            shredded Fish
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad (Regular salad) + 1 DRY Multi Grain Bhakri + 1 Cup
+            Aokori
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad (Organic Apple cider vinegar) + Herby Pot Chicken Pulao
+            + 1 Cup Mix Veg Raita
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad (1 TBSP Crushed Flaxseeds + Peanuts Dressing) + 1 Cup
+            Millets + 2 Pcs Chicken / Fish (Less Gravy)
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad (Green Chutney dressing) + Chicken vegetable khichada +
+            1 Cup Minty Curd
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad (Regular Salad) + Chicken in Green Gravy + 1 Cup
+            Steamed Quinoa
+          </td>
+        </tr>
+        <tr class="highlight">
+          <td class="first-column" onclick="toggleCrossOut(this)">Mid Noon</td>
+          <td onclick="toggleCrossOut(this)">
+            Buttermilk + Greens - 1 glass (100g low fat curd)
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Roasted Chana-30g + Cucumber slices (1 bowl) + 1 Cup Green Tea
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 TBSP Flaxseeds + Roasted Edamame (20g)
+          </td>
+          <td onclick="toggleCrossOut(this)">1 Glass Plain Chass</td>
+          <td onclick="toggleCrossOut(this)">
+            Buttermilk (100g low fat curd + 1 Cup Water + A pinch of Salt +
+            Lemon Juice + Spices)
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Buttermilk (100g low fat curd + 1 Cup Water + 2 pinches Ground
+            Flaxseeds + Sesame) + 1 Cup Green Tea
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Green Apple + 1 TBSP Pumpkin + 1 TBSP Chia Seeds
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column" onclick="toggleCrossOut(this)">Evening</td>
+          <td onclick="toggleCrossOut(this)">
+            Green / Herbal Tea + 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Cup
+            Sprouts + Vegetables
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green / Herbal Tea + 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Cup
+            Sprouts + Vegetables
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green / Herbal Tea + 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Cup
+            Sprouts + Vegetables
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green / Herbal Tea + 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Cup
+            Sprouts + Vegetables
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green / Herbal Tea + 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Cup
+            Sprouts + Vegetables
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green / Herbal Tea + 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Cup
+            Sprouts + Vegetables
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            Green / Herbal Tea + 1 Cup + 1/4 to 1/2 TSP Cinnamon Powder + 1 Cup
+            Sprouts + Vegetables
+          </td>
+        </tr>
+        <tr class="highlight">
+          <td class="first-column" onclick="toggleCrossOut(this)">
+            To Be Taken Before Dinner
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            2 TSP Methi Seeds (Soaked 8 to 10 hours) OR 2 TSP Methi Seeds Powder
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column" onclick="toggleCrossOut(this)">Dinner</td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad / Tomato Soup (Unstrained) + Nargisi Kebabs + 5 to 6
+            Nuts + 1 Nutri chutney 2 TBSP
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad / Palak Soup (Unstrained) + 1/2 Cup Rice + 1 Cup Aokori
+            + Fish (Less Gravy)
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad / Mix Veg Soup (Unstrained) + Baked Fish Fingers +
+            Nutri Chutney 2 TBSP
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad / Broccoli Walnut Soup (Unstrained) + 1 small Bajra +
+            Jowar + Ragi Bhakri + 2 Pcs Chicken / Fish (Less Gravy)
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad / Tomato Soup (Unstrained) + Grilled Chicken with Dill
+            leaves + Curd Vegetable Dip 1 small Cup
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad / Palak Soup (Unstrained) + Amaranth crushed Fish with
+            stir fried vegetables
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Bowl Salad / Mix Veg Soup (Unstrained) + 1/2 Cup Rice + 2 Pcs
+            Chicken / Fish (Less Gravy)
+          </td>
+        </tr>
+        <tr class="highlight">
+          <td class="first-column" onclick="toggleCrossOut(this)">Bed Time</td>
+          <td onclick="toggleCrossOut(this)">
+            1 Cup Milk (Same as Morning) + 1/2 TSP Turmeric Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Cup Milk (Same as Morning) + 4 to 5 strands of Kesari + 1 to 2
+            Elaichi pods
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Cup Milk (Same as Morning) + 1/2 TSP Turmeric Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Cup Milk (Same as Morning) + 4 to 5 strands of Kesari + 1 to 2
+            Elaichi pods
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Cup Milk (Same as Morning) + 1/2 TSP Turmeric Powder
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Cup Milk (Same as Morning) + 4 to 5 strands of Kesari + 1 to 2
+            Elaichi pods
+          </td>
+          <td onclick="toggleCrossOut(this)">
+            1 Cup Milk (Same as Morning) + 1/2 TSP Turmeric Powder
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      function toggleCrossOut(element) {
+        element.classList.toggle("crossed-out");
+      }
+    </script>
+  </body>
+</html>

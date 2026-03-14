@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetarian Weekly Meal Plan</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #fffaf0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #77dd77;
+            font-size: 24px;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px; /* Smaller font size */
+        }
+
+        th, td {
+            padding: 8px; /* Reduced padding */
+            text-align: center;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: #77dd77;
+            color: white;
+        }
+
+        td {
+            background-color: #dcefdc;
+        }
+
+        .highlight {
+            background-color: #b3e6b3;
+        }
+
+        .header {
+            background-color: #77dd77;
+            color: white;
+        }
+
+        .first-column {
+            background-color: #77dd77;
+            color: white;
+        }
+
+        .crossed-out {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+
+        .alt-row {
+            background-color: #e6f7e6;
+        }
+
+        .reset-button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #77dd77;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cells = document.querySelectorAll("td");
+            cells.forEach(cell => {
+                cell.addEventListener("click", function () {
+                    cell.classList.toggle("crossed-out");
+                });
+            });
+
+            document.getElementById("resetButton").addEventListener("click", function () {
+                cells.forEach(cell => {
+                    cell.classList.remove("crossed-out");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Vegetarian Weekly Meal Plan</h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="header"> </th>
+                <th class="header">Monday</th>
+                <th class="header">Tuesday</th>
+                <th class="header">Wednesday</th>
+                <th class="header">Thursday</th>
+                <th class="header">Friday</th>
+                <th class="header">Saturday</th>
+                <th class="header">Sunday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first-column">Breakfast</td>
+                <td>Protein Smoothie + Eggs</td>
+                <td>Protein Smoothie + Tofu Scramble (2x)</td>
+                <td>Protein Smoothie + Oatmeal</td>
+                <td>Protein Smoothie + Greek Yogurt Parfait</td>
+                <td>Protein Smoothie + Avocado Toast</td>
+                <td>Protein Smoothie + Craig McMuffin</td>
+                <td>Protein Smoothie + Joy's Protein Pancakes</td>
+            </tr>
+            <tr class="alt-row">
+                <td class="first-column">Lunch</td>
+                <td>Bean Burrito</td>
+                <td>Cold Sesame Noodles and Edamame</td>
+                <td>Garden Omelet</td>
+                <td>Veggie Burger and Quinoa-Chickpea Salad</td>
+                <td>Baked Potato topped with Vegetarian Chili</td>
+                <td>Power Salad</td>
+                <td>Chinese Takeout</td>
+            </tr>
+            <tr>
+                <td class="first-column">Dinner</td>
+                <td>BBQ Cauliflower Steak, Quinoa and Edamame</td>
+                <td>Salad and Pizza</td>
+                <td>Tempeh with Pasta and Broccoli</td>
+                <td>Vegetarian Chili</td>
+                <td>Cauliflower Buffalo "Wings" with Blue Cheese Dip and Baked Tofu</td>
+                <td>Portabella Pizzas and Soup</td>
+                <td>Veggie Burgers</td>
+            </tr>
+            <tr class="alt-row">
+                <td class="first-column">Snack 1</td>
+                <td>Apple + 1 Tbsp Peanut Butter</td>
+                <td>Homemade Trail Mix</td>
+                <td>Greek Yogurt</td>
+                <td>Chocolate Protein Muffin</td>
+                <td>1/2 cup Pistachio Nuts in shell</td>
+                <td>Banana + 1 Tbsp Nut Butter</td>
+                <td>1 to 2 cups Lentil or Black Bean Soup</td>
+            </tr>
+            <tr>
+                <td class="first-column">Snack 2</td>
+                <td>1/2 cup Pumpkin Seeds in shell</td>
+                <td>Avocado Toast</td>
+                <td>1/4 cup almonds + pear</td>
+                <td>Veggies with 1/4 cup Hummus</td>
+                <td>1 Cheese Stick + an Orange</td>
+                <td>Greek Yogurt with Sunflower Seeds</td>
+                <td>Chocolate Protein Muffin</td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="resetButton" class="reset-button">Reset</button>
+</body>
+</html>

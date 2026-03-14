@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>USER PROFILE</title>
+    <style>
+      body {
+        text-align: center;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column; /* Stack header on top and content below */
+        justify-content: flex-start; /* Align items to the start (top) */
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0; /* Light pastel green background */
+      }
+      header {
+        width: 100%;
+        padding: 20px;
+      }
+      header h1 {
+        margin: 0;
+        color: #72d672;
+      }
+      .main-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .profile-container {
+        flex: 1;
+        max-width: 50%;
+        padding: 20px;
+        background-color: #dcefdc;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-left: 50px; /* Move towards the left */
+        text-align: center;
+      }
+      .profile-picture {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        margin-top: 20px;
+      }
+      .upload-button {
+        margin-top: 10px;
+        display: block;
+      }
+      .result-details {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 400px;
+        text-align: left;
+        color: black;
+      }
+      .result-details p {
+        margin: 10px 0;
+      }
+      .image-container {
+        flex: 1;
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+      .create-diet-plan-button,
+      .update-details-button {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 2px solid #4caf50;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .create-diet-plan-button:hover,
+      .update-details-button:hover {
+        background-color: white;
+        color: #4caf50;
+      }
+      nav {
+        background-color: #77dd77;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>BMI STATUS REPORT</h1>
+    </header>
+
+    <div class="main-content">
+      <div class="profile-container">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="Profile Picture"
+          class="profile-picture"
+          id="profilePic"
+        />
+        <input type="file" id="fileInput" class="upload-button" />
+        <div class="result-details">
+          <p><strong>Age:</strong> {{ result.age }}</p>
+          <p><strong>Height:</strong> {{ result.height_cm }} cm</p>
+          <p><strong>Weight:</strong> {{ result.weight_kg }} kg</p>
+          <p><strong>Gender:</strong> {{ result.gender }}</p>
+          <p><strong>BMI:</strong> {{ result.bmi }}</p>
+          <p><strong>Status:</strong> {{ result.status }}</p>
+        </div>
+
+        <!-- Update Details Button -->
+        <a href="{{ url_for('update_details') }}">
+          <button class="update-details-button">Update Details</button>
+        </a>
+
+        <!-- Create Diet Plan Button -->
+        <a href="{{ url_for('diet_plan') }}">
+          <button class="create-diet-plan-button">Create Diet Plan</button>
+        </a>
+      </div>
+
+      <div class="image-container">
+        <img src="static/images/result.png" alt="Result Image" />
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("profilePic").src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        });
+    </script>
+  </body>
+</html>

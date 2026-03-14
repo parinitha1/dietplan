@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diet Plan Table</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #77dd77;
+        font-size: 24px;
+      }
+
+      table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      th {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      td {
+        background-color: #dcefdc;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #c9e9c9;
+      }
+
+      .highlight {
+        background-color: #b3e6b3;
+      }
+
+      .header {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .first-column {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .crossed-out {
+        text-decoration: line-through;
+        color: #aaa;
+      }
+
+      .reset-button {
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: #77dd77;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Diet Plan</h1>
+    <button class="reset-button" onclick="resetTable()">Reset</button>
+    <table id="dietTable">
+      <thead>
+        <tr>
+          <th>Meals</th>
+          <th>Day 1</th>
+          <th>Day 2</th>
+          <th>Day 3</th>
+          <th>Day 4</th>
+          <th>Day 5</th>
+          <th>Day 6</th>
+          <th>Day 7</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="first-column">Waking Up</td>
+          <td>Apple cider Vinegar (2tsp) + flax seeds (1tbsp)</td>
+          <td>Tulsi Drops (1tsp) + Walnuts (3 nos.)</td>
+          <td>Ginger and Tulsi Tea (1 Cup) + mixed seeds (1tsp)</td>
+          <td>Lemon Ginger tea (1 cup) + Almonds (5 nos.)</td>
+          <td>Apple cider Vinegar (2tsp) + Mixed nuts (5 nos.)</td>
+          <td>Ginger Tea with Honey (1 Cup) + 2 Walnuts</td>
+          <td>Lemon Honey Tea (1 Cup) + pumpkin seeds (1tbsp)</td>
+        </tr>
+        <tr>
+          <td class="first-column">Breakfast</td>
+          <td>
+            Red Poha with Veggies (1 Bowl) + Bottle gourd Juice (1glass) +
+            Sprouts (3tbsp)
+          </td>
+          <td>Brown rice idli (3 nos) + Sambar (1 bowl)</td>
+          <td>
+            Oats with Milk (1bowl) + Fruit (1 no) + moong sprouts raw (3 tbsp)
+          </td>
+          <td>
+            Mixed Veg Brown Bread Sandwich (2slice) + Cucumber carrot Juice
+            (1glass) + sprouts (3 tbsp)
+          </td>
+          <td>
+            Chole paratha (1 no.) + Chutney (3 tbsp) + Spinach Cucumber mint
+            Juice (1 glass)
+          </td>
+          <td>Besan Chila with Veggies stuffed + Chutney (3tbsp)</td>
+          <td>Brown rice Dosa (2 nos.) + sambar (1 bowl)</td>
+        </tr>
+        <tr>
+          <td class="first-column">Mid Morning</td>
+          <td>Mint Jeera butter milk (1 glass)</td>
+          <td>Fruit bowl</td>
+          <td>Blanched vegetable juice (1 glass)</td>
+          <td>Tender coconut water (1 glass)</td>
+          <td>Watermelon (1 bowl)</td>
+          <td>Nutty fruit Salad (1 bowl)</td>
+          <td>Ragi Buttermilk Porridge (1 bowl)</td>
+        </tr>
+        <tr>
+          <td class="first-column">Lunch</td>
+          <td>
+            Brown Rice (1 bowl) + Kosumber (1 bowl) + Dal + Veg Curry (1 cup)
+          </td>
+          <td>
+            Whole wheat Phulka (2 nos.) + Chole curry (1 bowl) + Mixed pepper
+            corn salad (1 bowl)
+          </td>
+          <td>Stuffed multigrain paratha (2nos.) + Cucumber Raita (1Katori)</td>
+          <td>Rice (1 bowl) + dal (1 bowl) + Tomato Garlic Rasam (1bowl)</td>
+          <td>
+            Multigrain roti (2nos.) + Lauki dal (1 bowl) + Buttermilk (1 glass)
+          </td>
+          <td>
+            Millet Roti (2 nos.) + Matki amti curry (1 bowl) + pepper rasam (1
+            bowl)
+          </td>
+          <td>Moong Dal Khichdi (1bowl) + Cucumber Raita (1 Katori)</td>
+        </tr>
+        <tr>
+          <td class="first-column">Evening Snack</td>
+          <td>Green Tea (1 cup) + Roasted Makhana (5tsp)</td>
+          <td>Tea without Sugar (1cup) + Chana Sundal (5 tbsp)</td>
+          <td>Lime Juice (Salty) (1 glass) + Groundnut Tikki (50 gm)</td>
+          <td>Herbal tea (1 Cup) + Roasted bhel (50 gm)</td>
+          <td>Boiled peanuts (50gm) + Green tea (1 Cup)</td>
+          <td>Green Tea (1 Cup) + Bhujia (3 tbsp)</td>
+          <td>Ginger tea (1 Cup) + Boiled Green peas Chaat (3 tbsp)</td>
+        </tr>
+        <tr>
+          <td class="first-column">Dinner</td>
+          <td>
+            Whole wheat Phulka (2 nos.)+ Veg curry (1 bowl) + Pumpkin Lentil
+            Soup (1 bowl)
+          </td>
+          <td>
+            Pumpkin Dal Soup with Oats (1 Bowl) + Sauteed coloured Pepper (1
+            Bowl)
+          </td>
+          <td>
+            Whole wheat Phulka (1no) + capsicum curry (1 bowl) + Dal garlic Soup
+            (1 bowl)
+          </td>
+          <td>Boiled Sweet Potato Chaat (1 bowl) + Mushroom Soup (1 bowl)</td>
+          <td>Broken wheat Khichdi (1bowl) + Chutney (3 tbsp)</td>
+          <td>Paneer wrap (1 no.) + Sauteed Mixed Vegetable Salad (1 bowl)</td>
+          <td>
+            Jowar Phulka (2nos.) + Green peas curry (1 bowl) + Moringa leaves
+            tomato soup (1 bowl)
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column">Bed Time</td>
+          <td>Turmeric Milk</td>
+          <td>Triphala tablet (1 no.)</td>
+          <td>Cinnamon Milk</td>
+          <td>Turmeric Pepper Milk</td>
+          <td>Triphala tablet (1 no.)</td>
+          <td>Cinnamon water</td>
+          <td>Pepper milk</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      const table = document.getElementById("dietTable");
+
+      table.addEventListener("click", function (e) {
+        const target = e.target;
+        if (target.tagName === "TD") {
+          target.classList.toggle("crossed-out");
+        }
+      });
+
+      function resetTable() {
+        const cells = table.getElementsByTagName("td");
+        for (let cell of cells) {
+          cell.classList.remove("crossed-out");
+        }
+      }
+    </script>
+  </body>
+</html>

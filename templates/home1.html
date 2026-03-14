@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Diet Plan Form</title>
+    <style>
+      body {
+        text-align: center;
+        margin: 0;
+        height: 100vh;
+        width: 200vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0; /* Light pastel green background */
+      }
+      h1,
+      h2,
+      h3 {
+        color: #77dd77;
+      }
+      .form-container {
+        flex: 1;
+        max-width: 50%; /* Adjust the width as needed */
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      input[type="number"],
+      select,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #b3e6b3;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #77dd77;
+      }
+      .image-container {
+        flex: 1;
+        max-width: 50%; /* Adjust the width as needed */
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Create Diet Plan</h2>
+      <form action="/submit" method="POST">
+        <label for="age">Age</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          max="100"
+          min="10"
+          required
+        /><br />
+        <label for="height">Height (cm)</label>
+        <input
+          type="number"
+          id="height"
+          name="height"
+          min="50"
+          required
+        /><br />
+        <label for="weight">Weight (kg)</label>
+        <input
+          type="number"
+          id="weight"
+          name="weight"
+          min="20"
+          max="500"
+          required
+        /><br />
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option></select
+        ><br />
+        <button type="submit">Create Diet Plan</button>
+      </form>
+    </div>
+    <div class="image-container">
+      <img src="static/images/home.png" alt="Diet Plan Image" />
+    </div>
+  </body>
+</html>

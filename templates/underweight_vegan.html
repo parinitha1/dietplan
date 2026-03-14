@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vegan Meal Plan</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #77dd77;
+        font-size: 24px;
+      }
+
+      table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      th {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      td {
+        background-color: #dcefdc;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #cceccc;
+      }
+
+      tr:nth-child(odd) td {
+        background-color: #dcefdc;
+      }
+
+      .highlight {
+        background-color: #b3e6b3;
+      }
+
+      .header {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .first-column {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .crossed-out {
+        text-decoration: line-through;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vegan Meal Plan</h1>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Breakfast</th>
+          <th>Snack</th>
+          <th>Lunch</th>
+          <th>Dinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="first-column">Monday</td>
+          <td>
+            Breakfast Burrito - Tortilla, 1/2 Cup Tofu scramble, 1/2 Cup Black
+            Beans, 1/2 Cup Avocado, Spices, salsa, hot sauce for flavor
+          </td>
+          <td>1-ounce walnuts, Apple sauce, Banana</td>
+          <td>
+            Chickpea Salad Sandwich - Whole wheat bread, 1 cup chickpeas, 1/2
+            cup vegan mayo, 2 tbsp mustard, Diced carrots, onion, celery for
+            flavor, 1 cup mango on the side
+          </td>
+          <td>
+            Pasta Marinara - 1/2 Cup lentils, 1/2 cup vegan "beef" crumbles, 1
+            cup edamame pasta, Olives, onion, garlic, basil, oregano, and
+            zucchini for flavor
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column">Tuesday</td>
+          <td>
+            Pancakes - Whole grain pancake mix with "flax egg", 2 tbsp peanut
+            butter, 1 cup berries, maple syrup
+          </td>
+          <td>Banana Boats - 1 Banana, 2 tbsp peanut butter, 6 dates</td>
+          <td>
+            PB&J - Whole wheat bread, 2 tbsp peanut butter, 2 tbsp jam, Hemp
+            seeds, Cinnamon
+          </td>
+          <td>
+            "Beef" Tacos - 3 corn tortillas, 1/2 cup vegan "beef" crumbles, 1/2
+            cup black beans, 1 whole avocado, lettuce, tomato, vegan "sour
+            cream"
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column">Wednesday</td>
+          <td>
+            Avocado Toast - 1 whole avocado, 2 slices whole grain bread, sliced
+            tomato, hemp seeds, nutritional yeast, garlic powder, onion powder,
+            pepper
+          </td>
+          <td>
+            Peanut Butter Toast - 2 slices whole grain bread, 3 tbsp peanut
+            butter, 1 medium banana, cinnamon
+          </td>
+          <td>
+            Smoothie - 1 banana, 1/2 cup strawberries, 1/4 cup walnuts, 1/4 cup
+            chia seeds, 1/2 cup fruit juice, add water or milk of choice as
+            needed for extra liquid, handful of spinach
+          </td>
+          <td>
+            Pizza - 1 premade pizza crust, marinara or pizza sauce, vegan
+            "cheese", vegan "beef crumbles" or "chicken", vegetables of choice
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column">Thursday</td>
+          <td>
+            Oatmeal - 1 cup oats, 2 tbsp peanut butter, 1 cup soy milk, 1 medium
+            banana, Cinnamon
+          </td>
+          <td>Vegan granola bar, 1 piece of fruit</td>
+          <td>
+            Buffalo "Chicken" Wrap - 1 tortilla, Vegan "chicken" strips, 1 tbsp
+            buffalo sauce, Romaine lettuce, sliced tomato, 1/2 of an avocado,
+            vegan mayo
+          </td>
+          <td>
+            Stir-Fry - 1 cup tofu, 1 cup frozen mixed veg, Teriyaki stir-fry
+            sauce, 1/4 cup peanuts
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column">Friday</td>
+          <td>
+            Soy yogurt, 1 cup grapes, 1/4 cup granola, 2 tbsp almond butter,
+            Cinnamon
+          </td>
+          <td>
+            Trail Mix - 1/2 cup mixed nuts, 1/2 cup dried fruit, 1/4 cup dark
+            chocolate chips
+          </td>
+          <td>
+            Bean Burrito - 1 tortilla, 1 cup refried beans, vegan "cheese",
+            vegetables of choice
+          </td>
+          <td>
+            Enchiladas - 3 corn tortillas, 1/2 cup pinto beans, 1/2 cup avocado,
+            Vegan "chicken", Green enchilada sauce
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="resetTable()">Reset Crossouts</button>
+
+    <script>
+      document.querySelectorAll("td").forEach((td) => {
+        td.addEventListener("click", () => {
+          td.classList.toggle("crossed-out");
+        });
+      });
+
+      function resetTable() {
+        document.querySelectorAll(".crossed-out").forEach((td) => {
+          td.classList.remove("crossed-out");
+        });
+      }
+    </script>
+  </body>
+</html>

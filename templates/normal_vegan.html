@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #fffaf0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #77dd77;
+            font-size: 24px;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        th {
+            background-color: #77dd77;
+            color: white;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) td {
+            background-color: #dcefdc;
+        }
+
+        .crossed-out {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+
+        .header {
+            background-color: #77dd77;
+            color: white;
+        }
+
+        .first-column {
+            background-color: #77dd77;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vegan Meal Plan</h1>
+    <table>
+        <thead>
+            <tr class="header">
+                <th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Dinner</th>
+                <th>Evening Snack</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first-column">1</td>
+                <td>Avocado toast</td>
+                <td>Chickpea salad</td>
+                <td>Lentil stew</td>
+                <td>Apple slices with peanut butter</td>
+            </tr>
+            <tr>
+                <td class="first-column">2</td>
+                <td>Overnight oats</td>
+                <td>Quinoa salad</td>
+                <td>Vegetable stir-fry</td>
+                <td>Handful of mixed nuts</td>
+            </tr>
+            <tr>
+                <td class="first-column">3</td>
+                <td>Smoothie bowl</td>
+                <td>Sweet potato and black bean tacos</td>
+                <td>Vegan pasta primavera</td>
+                <td>Carrot sticks with hummus</td>
+            </tr>
+            <tr>
+                <td class="first-column">4</td>
+                <td>Chia pudding</td>
+                <td>Tofu wrap</td>
+                <td>Moroccan chickpea tagine</td>
+                <td>Rice cakes with almond butter</td>
+            </tr>
+            <tr>
+                <td class="first-column">5</td>
+                <td>Vegan pancakes</td>
+                <td>Veggie sushi rolls</td>
+                <td>Stuffed bell peppers</td>
+                <td>Banana with dark chocolate</td>
+            </tr>
+            <tr>
+                <td class="first-column">6</td>
+                <td>Tofu scramble</td>
+                <td>Lentil soup</td>
+                <td>Vegan pizza</td>
+                <td>Rice crackers with guacamole</td>
+            </tr>
+            <tr>
+                <td class="first-column">7</td>
+                <td>Fruit salad</td>
+                <td>Hummus and veggie wraps</td>
+                <td>Coconut curry with rice</td>
+                <td>Sliced cucumber with tahini</td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="resetCrossouts()">Reset</button>
+
+    <script>
+        document.querySelectorAll('td').forEach(td => {
+            td.addEventListener('click', () => {
+                td.classList.toggle('crossed-out');
+            });
+        });
+
+        function resetCrossouts() {
+            document.querySelectorAll('td').forEach(td => {
+                td.classList.remove('crossed-out');
+            });
+        }
+    </script>
+</body>
+</html>

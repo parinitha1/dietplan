@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Plan Table</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #77dd77;
+        font-size: 24px;
+      }
+
+      table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 14px; /* Smaller font size */
+      }
+
+      th,
+      td {
+        padding: 8px; /* Reduced padding */
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      th {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      td {
+        background-color: #dcefdc;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #e7f5e7;
+      }
+
+      .crossed-out {
+        text-decoration: line-through;
+        color: #aaa;
+      }
+
+      .header {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .first-column {
+        background-color: #77dd77;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weekly Meal Plan</h1>
+    <button onclick="resetTable()">Reset</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Breakfast</th>
+          <th>Lunch</th>
+          <th>Dinner</th>
+          <th>Snack</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="first-column">Monday</td>
+          <td onclick="toggleCrossOut(this)">Cool As A Cucumber Smoothie</td>
+          <td onclick="toggleCrossOut(this)">Guacamole Stuffed Peppers</td>
+          <td onclick="toggleCrossOut(this)">Zucchini Marinara Pasta</td>
+          <td onclick="toggleCrossOut(this)">
+            Cashew Cheese* + sliced vegetables
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column">Tuesday</td>
+          <td onclick="toggleCrossOut(this)">
+            Coconut Yogurt w/ cinnamon + nuts
+          </td>
+          <td onclick="toggleCrossOut(this)">Kale + Shitake Salad</td>
+          <td onclick="toggleCrossOut(this)">Pad Thai</td>
+          <td onclick="toggleCrossOut(this)">Eggplant Jerky</td>
+        </tr>
+        <tr>
+          <td class="first-column">Day 3</td>
+          <td onclick="toggleCrossOut(this)">Green Juice</td>
+          <td onclick="toggleCrossOut(this)">Gazpacho</td>
+          <td onclick="toggleCrossOut(this)">Rainbow Sushi Rolls</td>
+          <td onclick="toggleCrossOut(this)">Cauliflower Popcorn</td>
+        </tr>
+        <tr>
+          <td class="first-column">Day 4</td>
+          <td onclick="toggleCrossOut(this)">Cool As A Cucumber Smoothie</td>
+          <td onclick="toggleCrossOut(this)">Kale + Shitake Salad</td>
+          <td onclick="toggleCrossOut(this)">Curried Zucchini Noodles</td>
+          <td onclick="toggleCrossOut(this)">
+            Cashew Cheese* + sliced vegetables
+          </td>
+        </tr>
+        <tr>
+          <td class="first-column">Day 5</td>
+          <td onclick="toggleCrossOut(this)">
+            Coconut Yogurt w/ cinnamon + nuts
+          </td>
+          <td onclick="toggleCrossOut(this)">Detox Shredded Salad</td>
+          <td onclick="toggleCrossOut(this)">Carrot Avocado Soup</td>
+          <td onclick="toggleCrossOut(this)">Eggplant Jerky</td>
+        </tr>
+        <tr>
+          <td class="first-column">Day 6</td>
+          <td onclick="toggleCrossOut(this)">Iced Golden Milk Latte</td>
+          <td onclick="toggleCrossOut(this)">Cauliflower Rice Tabbouleh</td>
+          <td onclick="toggleCrossOut(this)">Spirulina Pesto Kelp Noodles</td>
+          <td onclick="toggleCrossOut(this)">Cauliflower Popcorn</td>
+        </tr>
+        <tr>
+          <td class="first-column">Day 7</td>
+          <td onclick="toggleCrossOut(this)">Beet, Carrot + Ginger Juice</td>
+          <td onclick="toggleCrossOut(this)">Detox Shredded Salad</td>
+          <td onclick="toggleCrossOut(this)">Pad Thai</td>
+          <td onclick="toggleCrossOut(this)">Turmeric Kale Chips</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      function toggleCrossOut(element) {
+        element.classList.toggle("crossed-out");
+      }
+
+      function resetTable() {
+        const cells = document.querySelectorAll("td");
+        cells.forEach((cell) => {
+          cell.classList.remove("crossed-out");
+        });
+      }
+    </script>
+  </body>
+</html>

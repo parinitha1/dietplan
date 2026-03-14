@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diet Plan Table</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf0;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: #77dd77;
+        font-size: 24px;
+      }
+
+      table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      th {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      td {
+        background-color: #dcefdc;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #c9e9c9;
+      }
+
+      .highlight {
+        background-color: #b3e6b3;
+      }
+
+      .header {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .first-column {
+        background-color: #77dd77;
+        color: white;
+      }
+
+      .crossed-out {
+        text-decoration: line-through;
+        color: #aaa;
+      }
+
+      .reset-button {
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: #77dd77;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Weekly Diet Plan</h1>
+    <button class="reset-button" onclick="resetTable()">Reset</button>
+    <table id="dietTable">
+      <thead>
+        <tr>
+          <th>Days</th>
+          <th>Breakfast</th>
+          <th>Morning Snack</th>
+          <th>Lunch</th>
+          <th>Evening Snack</th>
+          <th>Dinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="first-column">Monday</td>
+          <td>
+            3 onion stuffed parantha + 1 cup curd + 3 cashews + 4 almonds + 2
+            walnuts
+          </td>
+          <td>1 cup mango shake</td>
+          <td>
+            1 cup moong dal/chicken curry + 1 cup potato and cauliflower
+            vegetable + 3 chapatti + 1/2 cup rice + salad
+          </td>
+          <td>1 cup pomegranate juice + 2 butter toasted bread</td>
+          <td>1 cup pomegranate juice + 2 butter toasted bread</td>
+        </tr>
+        <tr>
+          <td class="first-column">Tuesday</td>
+          <td>
+            3 paneer stuffed besan cheela + green chutney + 1 cup curd + 3
+            cashews + 4 almonds + 2 walnuts
+          </td>
+          <td>1 apple smoothie with maple syrup</td>
+          <td>
+            1 cup masoor dal + 1 cup colocasia + 3 chapatti + 1/2 cup rice + 1
+            cup low curd + salad
+          </td>
+          <td>1 cup tomato soup with bread crumbs + 1 cup aloo chaat</td>
+          <td>1 cup carrot peas vegetable + 3 chapatti + salad</td>
+        </tr>
+        <tr>
+          <td class="first-column">Wednesday</td>
+          <td>
+            1.5 cup vegetable bread upma + 1 cup milk + 3 cashews + 4 almonds +
+            2 walnuts
+          </td>
+          <td>1 cup ripe banana with 2 tsp ghee</td>
+          <td>
+            1 cup rajma curry + 1 cup spinach potato + 3 chapatti + 1/2 cup rice
+            + salad
+          </td>
+          <td>1 cup vegetable juice + 1 cup upma</td>
+          <td>1.5 cup parwal vegetable + 3 chapatti + salad</td>
+        </tr>
+        <tr>
+          <td class="first-column">Thursday</td>
+          <td>
+            2 cucumber potato sandwich + 1 tsp green chutney + 1 orange juice +
+            3 cashews + 2 walnuts + 4 almonds
+          </td>
+          <td>1 cup buttermilk + 1 cup sweet potato chaat</td>
+          <td>
+            1 cup white chana/fish curry + 3 chapatti + 1/2 cup rice + salad
+          </td>
+          <td>1 cup almond milk + banana</td>
+          <td>1 cup cauliflower potato vegetable + 3 chapatti + salad</td>
+        </tr>
+        <tr>
+          <td class="first-column">Friday</td>
+          <td>
+            2 cup vegetable poha + 1 cup curd + 3 cashews + 4 almonds + 2
+            walnuts
+          </td>
+          <td>2 cups watermelon juice</td>
+          <td>
+            1 cup chana dal + 1 cup bhindi vegetable + 3 chapatti + 1/2 cup rice
+            + salad
+          </td>
+          <td>1 cup sprouts salad + 2 potato cheela + green chutney</td>
+          <td>1 cup peas mushroom vegetable + 3 chapatti + salad</td>
+        </tr>
+        <tr>
+          <td class="first-column">Saturday</td>
+          <td>
+            3 vegetable suji cheela + 1 cup strawberry shake + 4 cashews + 4
+            almonds + 3 walnuts
+          </td>
+          <td>1 cup coconut water + 1 cup pomegranate</td>
+          <td>
+            1 cup mix dal + 1 cup soybean curry + 3 chapatti + 1/2 cup curd +
+            salad
+          </td>
+          <td>1 cup fruit salad + 4 pc vegetable cutlets + green chutney</td>
+          <td>1 cup karela vegetable + 3 chapatti + salad</td>
+        </tr>
+        <tr>
+          <td class="first-column">Sunday</td>
+          <td>
+            2 egg brown bread sandwich + green chutney + 1 cup milk + 3 cashews
+            + 4 almonds + 2 walnuts
+          </td>
+          <td>1 cup banana shake</td>
+          <td>
+            1 cup arhar dal + 1 cup potato curry + 3 chapatti + 1/2 cup rice + 1
+            cup low fat curd + salad
+          </td>
+          <td>1 cup strawberry smoothie + 1 cup vegetable poha</td>
+          <td>1.5 cup chicken curry + 3 chapatti + salad</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      const table = document.getElementById("dietTable");
+
+      table.addEventListener("click", function (e) {
+        const target = e.target;
+        if (target.tagName === "TD") {
+          target.classList.toggle("crossed-out");
+        }
+      });
+
+      function resetTable() {
+        const cells = table.getElementsByTagName("td");
+        for (let cell of cells) {
+          cell.classList.remove("crossed-out");
+        }
+      }
+    </script>
+  </body>
+</html>
